@@ -1,0 +1,229 @@
+* {
+    box-sizing: border-box;
+}
+html, body, container {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+    font-family: 'Anaheim', sans-serif;
+}
+.top-bar {
+    height: 40px;
+    width: 100%;
+    display: flex;
+
+}
+.logo-header {
+    height: 30px;
+    width: 40%;
+    margin-left: 100px;
+    margin-top: 5px;
+    display: flex;
+}
+#logo-div {
+    height: 30px;
+    width: 30px;
+    background-image: url('./so-logo.jpg');
+    background-size: cover;
+    background-position: 50%;
+}
+#app-name {
+    height: 30px;
+    width: 200px;
+    font-size: 24px;
+}
+.log-bar {
+    height: 30px;
+    width: 60%;
+}
+
+.mini-top-bar {
+    height: 50px;
+    width: 100%;
+}
+.home {
+    width: 200px;
+    height: inherit;
+    margin-left: 120px;
+    text-align: center;
+    padding-top: 16px;
+}
+ul {
+    list-style-type: none;
+    display: flex;
+    margin-top: 11px;
+    margin-left: 400px;
+}
+li {
+    margin-left: 100px;
+}
+.sign-in-content {
+    height: 375px;
+    width: 500px;
+    margin-left: 35%;
+    margin-right: 50%;
+    border-color: lightgrey;
+    border-style: solid;
+    border-width: thin;
+    margin-top: 60px;
+}
+.sign-out-content {
+    height: 656px;
+    width: 500px;
+    margin-left: 35%;
+    margin-right: 50%;
+    border-color: lightgrey;
+    border-style: solid;
+    border-width: thin;
+    margin-top: 20px;
+}
+.sign-in-header {
+    height: 80px;
+    width: inherit;
+    text-align: center;
+    font-size: xx-large;
+    padding-top: 20px;
+}
+#sign-in-form {
+    margin: 0 auto;
+    height: 180px;
+    width: 425px;
+}
+#sign-up-form {
+    margin: 0 auto;
+    height: 477px;
+    width: 425px;
+}
+input[type=email], input[type=password], input[type=text], input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+#btn-container {
+    height: 50px;
+    width: inherit;
+    text-align: center;
+}
+#sign-btn {
+    height: 50px;
+    width: 150px;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-color: black;
+    color: white;
+}
+.sign-note {
+    margin-left: 37px;
+}
+.main-content {
+    min-height: 500px;
+    width: 100%;
+    display: flex;
+}
+.main-content-left {
+    height: 500px;
+    width: 30%;
+}
+.main-content-right {
+    height: 100%;
+    width: 70%;
+}
+.right-header {
+    height: 80px;
+    width: 600px;
+    display: flex;
+}
+.home-quest {
+    width: 500px;
+    font-size: 25px;
+}
+#search {
+    height: 80px;
+    margin-top: -1px;
+    font-size: xx-large;
+    outline: none;
+}
+.btn-ask-box {
+    height: 78px;
+    width: 100px;
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    padding-top: 23px;
+    cursor: pointer;
+}
+.btn-post-box {
+    height: 59px;
+    width: 120px;
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    padding-top: 23px;
+    cursor: pointer;
+    margin-left: 100px;
+}
+.right-content {
+    width: 100%;
+    height: 100%;
+    border-left-style: solid;
+    border-color: lightgrey;
+    border-width: thin;
+}
+.quest-header {
+    height: 87px;
+    margin-top: 10px;
+    font-size: 30px;
+    padding-top: 27px;
+    padding-left: 10px;
+}
+.ans-header {
+    height: 87px;
+    font-size: 24px;
+    padding-left: 10px;
+    padding-top: 27px;
+}
+.quest-container {
+    height: 117px;
+    width: 100%;
+    padding-left: 15px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-width: thin;
+    border-color: #f8f1f1;
+}
+.ans-container {
+    min-height: 100px;
+    width: 100%;
+    display: flex;
+}
+.vote-box {
+    height: inherit;
+    width: 15%
+}
+.user-ans {
+    height: inherit;
+    width: 70%;
+}
+.user-ans-box {
+    height: inherit;
+    width: 15%;
+}
+.left-mini {
+    height: 50px;
+    width: 170px;
+    margin-left: 234px;
+}
+#text-area {
+    height: 200px;
+    width: 500px;
+    margin-left: 100px;
+}

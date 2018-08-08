@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>stack-lite</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Anaheim' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <div class="logo-header">
+            <div id="logo-div"></div>
+            <div id="app-name">Stack Overflow lite</div>
+        </div>
+        <div class="log-bar">
+            <ul list-style-type="none">
+                <li>
+                    <a href="./signin.html">Sign in</a>
+                </li>
+                <li>
+                    <a href="./signup.html">Sign up</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="mini-top-bar">
+        <div class="home">
+            <i class="material-icons">
+                <a href="./index.html">home</a>
+            </i>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="main-content-left">
+        </div>
+        <div class="main-content-right">
+            <div class="right-header">
+                <form class="home-quest">
+                    <input type="text" id="search" placeholder="search">
+                </form>
+                <div class="btn-ask-box">
+                    <div class="btn-ask">Ask</div>
+                </div>
+            </div>
+            <div class="right-content">
+                <div class="quest-header">Delete and EDIT API's using expressJS</div>
+                <div class="quest-container">
+                    <p>I created DELETE API and in the callback function i have written .remove function to delete a product
+                        if the id i have given is present.But when i am giving incorrect input, the result is receiving some
+                        object which shouldn't be the case.As there is no data with the Id i have given it should be null
+                        or undefined. Can someone help on this? </p>
+                </div>
+                <div class="ans-header">Answers</div>
+                <div class= "ans-container">
+                    <div class = "vote-box">upvote</div>
+                    <div class= "user-ans">why can't you just answer your question yourself. or better still, ask google.</div>
+                    <div class= "user-ans-box">Answered by Fejiro Gospel</div>
+                </div>
+
+                <div class= "ans-header">Your answer</div>
+                <textarea id= "text-area"></textarea>
+                <div class= "btn-post-box">Post Your Answer</div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
