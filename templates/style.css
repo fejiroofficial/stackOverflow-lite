@@ -6,6 +6,7 @@ html, body, container {
     padding: 0px;
     height: 100%;
     width: 100%;
+    min-width: 1235px;
     font-family: 'Anaheim', sans-serif;
 }
 .top-bar {
@@ -101,8 +102,11 @@ input[type=email], input[type=password], input[type=text], input[type=number] {
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
-    border-radius: 4px;
     box-sizing: border-box;
+}
+#ans-title {
+    width: 500px;
+    margin-left: 98px;
 }
 #btn-container {
     height: 50px;
@@ -130,6 +134,7 @@ input[type=email], input[type=password], input[type=text], input[type=number] {
 .main-content-left {
     height: 500px;
     width: 30%;
+    margin-top: 90px;
 }
 .main-content-right {
     height: 100%;
@@ -137,27 +142,27 @@ input[type=email], input[type=password], input[type=text], input[type=number] {
 }
 .right-header {
     height: 80px;
-    width: 600px;
+    width: 100%;
     display: flex;
 }
 .home-quest {
-    width: 500px;
+    width: 606px;
     font-size: 25px;
 }
-#search {
-    height: 80px;
+.text {
+    height: 40px;
     margin-top: -1px;
-    font-size: xx-large;
     outline: none;
 }
 .btn-ask-box {
-    height: 78px;
-    width: 100px;
+    height: 40px;
+    width: 119px;
+    margin-left: 226px;
     background-color: black;
     color: white;
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
-    padding-top: 23px;
+    padding-top: 8px;
     cursor: pointer;
 }
 .btn-post-box {
@@ -192,13 +197,18 @@ input[type=email], input[type=password], input[type=text], input[type=number] {
     padding-top: 27px;
 }
 .quest-container {
-    height: 117px;
-    width: 100%;
+    min-height: 117px;
+    width: 80%;
     padding-left: 15px;
+    padding-right: 15px;
     border-top-style: solid;
     border-bottom-style: solid;
     border-width: thin;
     border-color: #f8f1f1;
+    border-right-style: solid;
+}
+.user-quest-container {
+    width: 100%;
 }
 .ans-container {
     min-height: 100px;
@@ -211,7 +221,7 @@ input[type=email], input[type=password], input[type=text], input[type=number] {
 }
 .user-ans {
     height: inherit;
-    width: 70%;
+    width: 500px;
 }
 .user-ans-box {
     height: inherit;
@@ -221,9 +231,108 @@ input[type=email], input[type=password], input[type=text], input[type=number] {
     height: 50px;
     width: 170px;
     margin-left: 234px;
+    font-size: 19px;
+    display: flex;
 }
 #text-area {
     height: 200px;
     width: 500px;
     margin-left: 100px;
+}
+.profile-content {
+    height: 300px;
+    width: inherit;
+    display: flex;
+}
+#profile-picture {
+    height: 300px;
+    min-width: 280px;
+    margin-left: 10px;
+    border-style: solid;
+    border-color: lightgrey;
+    border-width: thin;
+    border-radius: 3px;
+    background-image: url('https://tse1.mm.bing.net/th?id=OIP.lHdzDIJ34WaPPa6agXdrFQHaHa&pid=15.1&P=0&w=300&h=300')
+}
+#about-user {
+    height: 300px;
+    width: 670px;
+    display: flex;
+}
+#des-user {
+    height: inherit;
+    width: 460px;
+    padding-left: 10px;
+}
+#dis-name {
+    height: 50px;
+    width: inherit;
+    font-size: 40px;
+    font-weight: bold
+}
+#title {
+    height: 50px;
+    width: inherit;
+    font-size: 25px;
+    color: gray;
+}
+#about-story {
+    height: 200px;
+    width: inherit;
+}
+#social-user {
+    width: inherit;
+    height: inherit;
+}
+.soc-top {
+    height: 30px;
+    width: inherit;
+    display: flex;
+}
+.social-ad {
+    color: gray;
+    padding-top: 2px;
+}
+.public {
+    width: 25px;
+}
+#twitter {
+    padding-left: 5px;
+}
+.edit-btn {
+    margin-top: 25px;
+    margin-left: 11px;
+}
+.user-quest-head {
+    min-height: 200px;
+    display: flex;
+}
+.most-rec-ans {
+    width: 43%;
+    border-style: solid;
+    border-color: gray;
+    border-width: thin;
+    margin-left: 10px;
+}
+.most-x {
+    min-height: 200px;
+}
+.most-y {
+    min-height: 200px;
+}
+.rec-ans-top {
+    height: 30px;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+}
+#all-quest-num {
+    margin-left: 11px;
+}
+a {
+    text-decoration: none;
+    color: #968989;
+}
+#anc-ask {
+    color: white;
 }

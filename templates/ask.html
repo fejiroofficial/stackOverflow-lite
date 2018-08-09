@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>stack-lite</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Anaheim' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <div class="logo-header">
+            <div id="logo-div"></div>
+            <div id="app-name">Stack Overflow lite</div>
+        </div>
+    </div>
+    <div class="mini-top-bar">
+        <div class="home">
+            <i class="material-icons">
+                <a href="./index.html">home</a>
+            </i>
+        </div>
+    </div>
+    <div class="main-content">
+            <div class="main-content-left">
+                    <div class= "left-mini">
+                        <div class="public"><i class="material-icons">public</i></div>
+                        <a href= "./questions.html">StackOverflow</a>
+                    </div>
+                    <div class= "left-mini">
+                            <div class="public"><i class="material-icons">person</i></div>
+                            <a href= "./profile.html">Profile</a>
+                    </div>
+                </div> 
+        <div class="main-content-right">
+            <div class="right-header">
+                <form class="home-quest">
+                    <input type="text" class="text" placeholder="search">
+                </form>
+            </div>
+            <div class="right-content">
+                <div class="quest-header">Ask a question</div>
+                <div class= "ans-header">Title</div>
+                <div id= "ans-title">
+                <input type="text" class="text" placeholder="Your title goes here">
+                </div>                
+                <div class= "ans-header">Body</div>
+                <textarea id= "text-area"></textarea>
+                <div class= "btn-post-box">Post Your Question</div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

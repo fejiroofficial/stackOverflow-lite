@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href='https://fonts.googleapis.com/css?family=Anaheim' rel='stylesheet'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -16,16 +17,6 @@
         <div class="logo-header">
             <div id="logo-div"></div>
             <div id="app-name">Stack Overflow lite</div>
-        </div>
-        <div class="log-bar">
-            <ul list-style-type="none">
-                <li>
-                    <a href="./signin.html">Sign in</a>
-                </li>
-                <li>
-                    <a href="./signup.html">Sign up</a>
-                </li>
-            </ul>
         </div>
     </div>
     <div class="mini-top-bar">
@@ -36,18 +27,92 @@
         </div>
     </div>
     <div class="main-content">
-        <div class="main-content-left"></div>
+        <div class="main-content-left">
+            <div class="left-mini">
+                <div class="public">
+                    <i class="material-icons">public</i>
+                </div>
+                <a href="./questions.html">StackOverflow</a>
+            </div>
+            <div class="left-mini">
+                <div class="public">
+                    <i class="material-icons">person</i>
+                </div>
+                <a href="./profile.html">Profile</a>
+            </div>
+        </div>
         <div class="main-content-right">
             <div class="right-header">
                 <form class="home-quest">
                     <input type="text" id="search" placeholder="search">
                 </form>
                 <div class="btn-ask-box">
-                    <div class="btn-ask">Ask</div>
+                    <a id="anc-ask" href= "./ask.html"><div class="btn-ask">Ask</div></a>
                 </div>
             </div>
             <div class="right-content">
-                <div class="quest-header">Top Questions</div>
+                <div class="quest-header">Profile</div>
+                <div class="profile-content">
+                    <div id="profile-picture"></div>
+                    <div id="about-user">
+                        <div id="des-user">
+                            <div id="dis-name">Tholle-mayer</div>
+                            <div id="title">Software developer</div>
+                            <div id="about-story">
+                                <p>This is a story 'about user'</p>
+                            </div>
+                        </div>
+                        <div id="social-user">
+                            <div class="soc-top">10 Questions</div>
+                            <div class="soc-top">20 Answers</div>
+                            <div class="soc-top">
+                                <div class="public">
+                                    <i class="material-icons">room</i>
+                                </div>
+                                <div class="social-ad">California, USA</div>
+                            </div>
+                            <div class="soc-top">
+                                <div class="public" id="twitter">
+                                    <i class="fa fa-twitter"></i>
+                                </div>
+                                <div class="social-ad">tholle_coder</div>
+                            </div>
+                            <div class="soc-top">
+                                <div class="public" id="twitter">
+                                    <i class="fa fa-github"></i>
+                                </div>
+                                <div class="social-ad">tholle-mayer</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-post-box edit-btn">Edit profile</div>
+                <div class="quest-header">Questions</div>
+                <div class="user-quest-head">
+                    <div class="most-rec-ans most-x">
+                        <div class="rec-ans-top">most recent</div>
+                        <div class="quest-container user-quest-container">
+                            <h2>
+                                <a href="./question.html">Delete and EDIT API's using expressJS</a>
+                            </h2>
+                            <p>I created DELETE API and in the callback function i have written .remove function to delete a
+                                product if the id i have given is present.But when i am giving incorrect input, the result
+                                is receiving ...</p>
+                        </div>
+                    </div>
+                    <div class="most-rec-ans most-y">
+                        <div class="rec-ans-top">most answered</div>
+                        <div class="quest-container user-quest-container">
+                            <h2>
+                                <a href="./question.html">Delete and EDIT API's using expressJS</a>
+                            </h2>
+                            <p>I created DELETE API and in the callback function i have written .remove function to delete a
+                                product if the id i have given is present.But when i am giving incorrect input, the result
+                                is receiving ...</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

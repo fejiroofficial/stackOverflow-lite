@@ -36,19 +36,28 @@
         </div>
     </div>
     <div class="main-content">
-        <div class="main-content-left">
-        </div>
+            <div class="main-content-left">
+                    <div class= "left-mini">
+                        <div class="public"><i class="material-icons">public</i></div>
+                        <a href= "./questions.html">StackOverflow</a>
+                    </div>
+                    <div class= "left-mini">
+                            <div class="public"><i class="material-icons">person</i></div>
+                            <a href= "./profile.html">Profile</a>
+                    </div>
+                </div> 
         <div class="main-content-right">
             <div class="right-header">
                 <form class="home-quest">
                     <input type="text" id="search" placeholder="search">
                 </form>
                 <div class="btn-ask-box">
-                    <div class="btn-ask">Ask</div>
+                    <a id="anc-ask" href= "./ask.html"><div class="btn-ask">Ask</div></a>
                 </div>
             </div>
             <div class="right-content">
                 <div class="quest-header">Delete and EDIT API's using expressJS</div>
+                <div>author name goes here</div>
                 <div class="quest-container">
                     <p>I created DELETE API and in the callback function i have written .remove function to delete a product
                         if the id i have given is present.But when i am giving incorrect input, the result is receiving some
@@ -57,7 +66,9 @@
                 </div>
                 <div class="ans-header">Answers</div>
                 <div class= "ans-container">
-                    <div class = "vote-box">upvote</div>
+                    <div class = "vote-box"><i class="material-icons">arrow_drop_down</i>2
+                        <i class="material-icons">arrow_drop_up</i>
+                    </div>
                     <div class= "user-ans">why can't you just answer your question yourself. or better still, ask google.</div>
                     <div class= "user-ans-box">Answered by Fejiro Gospel</div>
                 </div>
