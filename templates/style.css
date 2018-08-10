@@ -37,6 +37,17 @@ html, body, container {
 .log-bar {
     height: 30px;
     width: 60%;
+    display: flex;
+}
+.user-log-bar {
+  height: inherit;
+  display: flex;
+  margin-left: 600px;
+  padding-top: 4px;
+}
+#home-u-name {
+  height: inherit;
+  padding-top: 2px;
 }
 
 .mini-top-bar {
@@ -50,6 +61,7 @@ html, body, container {
     text-align: center;
     padding-top: 16px;
 }
+
 ul {
     list-style-type: none;
     display: flex;
@@ -157,13 +169,14 @@ input[type=email], input[type=password], input[type=text], input[type=number] {
 .btn-ask-box {
     height: 40px;
     width: 119px;
-    margin-left: 226px;
+    margin-left: 80px;
     background-color: black;
     color: white;
     font-size: 20px;
     text-align: center;
     padding-top: 8px;
     cursor: pointer;
+    margin-top: 8px;
 }
 .btn-post-box {
     height: 59px;
@@ -329,10 +342,21 @@ input[type=email], input[type=password], input[type=text], input[type=number] {
 #all-quest-num {
     margin-left: 11px;
 }
+
 a {
     text-decoration: none;
     color: #968989;
 }
+
+a:hover {
+  color: #000000;
+}
+
+a.active {
+  color: crimson;
+  font-weight: bolder;
+}
+
 #anc-ask {
     color: white;
 }
