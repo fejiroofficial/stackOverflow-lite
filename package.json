@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/fejiroofficial/stackoverflow-lite#readme",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "codeclimate-test-reporter": "^0.5.0",
     "coveralls": "^3.0.2",
     "cross-env": "^5.2.0",
