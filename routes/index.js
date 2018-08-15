@@ -9,6 +9,8 @@ router.route('/questions')
       .post(middlewares.validatePostQuestion, questionCtrl.postQuestion);
 
 router.get('/questions/:id', questionCtrl.getSingleQuestion);
+router.post('/questions/:id/answers', middlewares.validatePostAnswer, questionCtrl.postAnswer);
+
 
 
 export default router;
