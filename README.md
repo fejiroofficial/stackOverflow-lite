@@ -2,8 +2,8 @@
 
 [![Build Status](https://travis-ci.com/fejiroofficial/stackoverflow-lite.svg?branch=develop)](https://travis-ci.com/fejiroofficial/stackoverflow-lite)
 [![Coverage Status](https://coveralls.io/repos/github/fejiroofficial/stackoverflow-lite/badge.svg?branch=develop)](https://coveralls.io/github/fejiroofficial/stackoverflow-lite?branch=develop)
+
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage)](https://codeclimate.com/fejiroofficial/stackoverflow-lite/test_coverage)
 
 Andela developer challenge: Stack Overflow-lite is a platform where people can ask questions and provide answers.
 
@@ -52,5 +52,5 @@ Api is hosted [`here`]()
 
 ## UI Templates
 
-UI is hosted [here](https://fejiroofficial.github.io/Stack-Overflow-lite)
+UI is hosted [here](https://fejiroofficial.github.io/StackOverflow-lite)
 
