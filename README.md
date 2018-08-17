@@ -1,7 +1,7 @@
 # stackoverflow-lite
 
-[![Build Status]()
-[![Coverage Status]()]()
+[![Build Status](https://travis-ci.com/fejiroofficial/stackoverflow-lite.svg?branch=develop)](https://travis-ci.com/fejiroofficial/stackoverflow-lite)
+[![Coverage Status](https://coveralls.io/repos/github/fejiroofficial/stackoverflow-lite/badge.svg?branch=master)](https://coveralls.io/github/fejiroofficial/stackoverflow-lite?branch=master)
 [![Maintainability]()]()
 [![Test Coverage]()]()
 
