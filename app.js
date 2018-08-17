@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.get('/api/v1', (req, res) => {
     res.status(200).json ({
         status: "success",
-       message: 'welcome to stackOverflow-lite'
+       message: 'Welcome to home page'
     });
 });
 
@@ -28,3 +28,5 @@ app.use('*', (err,req, res, next) => {
 
 app.listen(port);
 console.log(`Running on port ${port}...`);
+
+export default app;
