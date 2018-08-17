@@ -1,7 +1,7 @@
 # stackoverflow-lite
 
 [![Build Status](https://travis-ci.com/fejiroofficial/stackoverflow-lite.svg?branch=develop)](https://travis-ci.com/fejiroofficial/stackoverflow-lite)
-[![Coverage Status](https://coveralls.io/repos/github/fejiroofficial/stackoverflow-lite/badge.svg?branch=master)](https://coveralls.io/github/fejiroofficial/stackoverflow-lite?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/fejiroofficial/stackoverflow-lite/badge.svg?branch=develop)](https://coveralls.io/github/fejiroofficial/stackoverflow-lite?branch=develop)
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage)](https://codeclimate.com/github/codeclimate/codeclimate/test_coverage)
 
