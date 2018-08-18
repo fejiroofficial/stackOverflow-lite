@@ -22,7 +22,6 @@ const postAnswer = (req, res) => {
         updatedAt: now
     }
     answers.push(newAnswer); 
-    console.log(answers);
     return res.status(201).json({
         status: 'successful',
         message: 'Answer added successfully',

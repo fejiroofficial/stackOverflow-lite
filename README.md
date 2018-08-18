@@ -47,10 +47,10 @@ npm start
 | POST          | api/v1/questions/:id/answers| Add an answer                         |
 
 
-Api is hosted [`here`]()
+Api is hosted [`here`](https://stack-over-flow-lite.herokuapp.com/api/v1)
 
 
 ## UI Templates
 
-UI is hosted [here](https://fejiroofficial.github.io/StackOverflow-lite)
+UI is hosted [here](https://fejiroofficial.github.io/stackoverflow-lite)
 

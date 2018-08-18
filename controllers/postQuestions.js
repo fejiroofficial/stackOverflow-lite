@@ -13,7 +13,6 @@ const postQuestion = (req, res) => {
     }
     
     allQuestions.push(newQuestion);
-    console.log(allQuestions);
     return res.status(201).json({
         status: 'successful',
         message: 'Question created successfully',
