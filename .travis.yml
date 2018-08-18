@@ -2,34 +2,26 @@ language: node_js
 
 node_js: 
   - node
-  
+
 env:
   global:
-    - CC_TEST_REPORTER_ID=b3b5a0bc0321dbf9a8da57ca0cd97220aa478c99a59b40c50e56dcf69ca8d4d7
-    - SECRET_KEY=somethingelse
+    - CC_TEST_REPORTER_ID=bc96229170e06e65f474105f89e6367abf78482cba7b910b7af6a70d642697a5
 
 cache: 
   directories: 
-    - "node_modules"
+    - "node_modules"    
 
-dist: trusty 
-
-services: 
-  - postgresql 
-
-addons: 
-  postgresql: "9.5"
+rvm:
+  - 2.2.0
 
 before_script:
-  - psql -c 'drop database if exists mydiary_test;' -U postgres
-  - psql -c 'create database mydiary_test;' -U postgres 
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
 
-script: 
+script:
   - yarn test
 
-after_success: 
-  - yarn coverage 
+after_script:
+  - yarn coverage
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
