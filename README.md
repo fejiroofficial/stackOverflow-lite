@@ -2,8 +2,8 @@
 
 [![Build Status](https://travis-ci.com/fejiroofficial/stackoverflow-lite.svg?branch=develop)](https://travis-ci.com/fejiroofficial/stackoverflow-lite)
 [![Coverage Status](https://coveralls.io/repos/github/fejiroofficial/stackoverflow-lite/badge.svg?branch=develop)](https://coveralls.io/github/fejiroofficial/stackoverflow-lite?branch=develop)
-
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/5f56a62af1ec8ef51d6c/maintainability)](https://codeclimate.com/github/fejiroofficial/stackoverflow-lite/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/5f56a62af1ec8ef51d6c/test_coverage)](https://codeclimate.com/github/fejiroofficial/stackoverflow-lite/test_coverage)
 
 Andela developer challenge: Stack Overflow-lite is a platform where people can ask questions and provide answers.
 
