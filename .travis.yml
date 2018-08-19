@@ -1,10 +1,10 @@
 language: node_js
 
-# deploy:
-#   provider: heroku
-#   api_key:
-#     secure: "3e16779b-eb44-4713-9cd9-c033698093e0"
-#   on: deploy  
+deploy:
+  provider: heroku
+  api_key:
+    secure: "53711ff6-0487-4f5f-b742-544d89205040"
+  
 
 node_js: 
   - node
@@ -30,4 +30,5 @@ script:
 
 after_script:
   - yarn coverage
+  - codeclimate-test-reporter < coverage/lcov.info
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
