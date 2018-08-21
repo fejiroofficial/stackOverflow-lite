@@ -10,8 +10,8 @@ describe('QUESTIONS CONTROLLER', () => {
 	// test question controller
 	const question = {
 		id: 1,
-		title: 'Hello World',
-		body: 'Hello world, just greeting',
+		questionTitle: 'Hello World',
+		questionDescription: 'Hello world, just greeting',
 		createdAt: new Date().toISOString(),
 		updatedAt: new Date().toISOString(),
 	};
@@ -90,15 +90,15 @@ describe('QUESTIONS CONTROLLER', () => {
 
 	describe('Post a single question', () => {
 		const validQuestion = {
-			title: 'What a question?',
-			body: 'i have a question here',
+			questionTitle: 'What a question?',
+			questionDescription: 'i have a question here',
 		};
 
 		describe('when invalid data is passed', () => {
 			it('should not create a question resource', (done) => {
 				const invalidQuestion = Object.assign({}, validQuestion, {
-					title: '',
-					body: ''
+					questionTitle: '',
+					questionDescription: ''
 				});
 
 				chai
