@@ -4,7 +4,8 @@
   "description": "An app that converts currencies using standard exchange rates",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js --exec babel-node",
+    "start": "babel-node app.js",
+    "build": "nodemon app.js --exec babel-node",
     "test": "cross-env NODE_ENV=test nyc mocha --timeout 10000 --require babel-register test --exec",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
@@ -19,7 +20,6 @@
   },
   "homepage": "https://github.com/fejiroofficial/stackoverflow-lite#readme",
   "dependencies": {
-    "body-parser": "^1.18.3",
     "codeclimate-test-reporter": "^0.5.0",
     "coveralls": "^3.0.2",
     "cross-env": "^5.2.0",

@@ -1,12 +1,12 @@
 import express from 'express';
-import bodyParser from 'body-parser';
 import router from './routes';
 
 const app = express();
-const port = 3000;
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }))
+const port = process.env.PORT || 3000;
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }))
 
 app.get('/api/v1', (req, res) => {
     res.status(200).json ({
@@ -17,7 +17,7 @@ app.get('/api/v1', (req, res) => {
 
 app.use('/api/v1', router);
 
-app.use('*', (err,req, res, next) => {
+app.use('*', (err, req, res, next) => {
     const statusCode = err.statusCode || 500;
     res.status(statusCode).json ({
         status: "fail",
@@ -26,7 +26,7 @@ app.use('*', (err,req, res, next) => {
 });
 
 
-app.listen(port);
-console.log(`Running on port ${port}...`);
+app.listen(port, () => console.log(`Running on port ${port}...`));
+
 
 export default app;
