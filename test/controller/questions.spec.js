@@ -7,7 +7,6 @@ import { allQuestions, answers } from '../../datastore/questions';
 chai.use(chaiHttp);
 
 describe('QUESTIONS CONTROLLER', () => {
-	// test question controller
 	const question = {
 		id: 1,
 		questionTitle: 'Hello World',
@@ -21,20 +20,6 @@ describe('QUESTIONS CONTROLLER', () => {
 	});
 
 	describe('Get all questions', () => {
-		describe('When no question exist', () => {
-			it('should return an empty list', () => {
-				chai
-					.request(app)
-					.get('/api/v1/questions')
-					.end((err, res) => {
-						expect(res.status).to.equal(200);
-						expect(res.body.status).to.equal('success');
-						expect(res.body.questions).to.be.an('array');
-						expect(res.body.questions).to.be.empty;
-					});
-			});
-		});
-
 		describe('When question exist', () => {
 			before(() => {
 				allQuestions.push(question);
@@ -57,7 +42,6 @@ describe('QUESTIONS CONTROLLER', () => {
 	});
 
 	describe('Get single question', () => {
-
 		before(() => {
 			allQuestions.push(question);
 		});

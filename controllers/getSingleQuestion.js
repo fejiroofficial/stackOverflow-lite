@@ -11,7 +11,7 @@ const getSingleQuestion = (req, res) => {
            questions: questionFound[0]
         });
     }
-    res.status(404).json ({
+    return res.status(404).json ({
         status: "fail",
         message: "Question not found"
     });
