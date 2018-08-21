@@ -1,13 +1,12 @@
 import express from 'express';
-import bodyParser from 'body-parser';
 import router from './routes';
 
 const app = express();
 
 const port = process.env.PORT || 3000;
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }))
 
 app.get('/api/v1', (req, res) => {
     res.status(200).json ({
