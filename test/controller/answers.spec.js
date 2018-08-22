@@ -7,7 +7,6 @@ import { allQuestions, answers } from '../../datastore/questions';
 chai.use(chaiHttp);
 
 describe('ANSWERS CONTROLLER', () => {
-  // test answer controller
   const answer = {
     id: 1,
     answer: 'This is just an answer',
@@ -27,9 +26,8 @@ describe('ANSWERS CONTROLLER', () => {
     
     describe('when invalid data is passed', () => {
       it('should not create an answer resource', (done) => {
-        const invalidAnswer = Object.assign({}, validAnswer, {
-          answer: '',
-        });
+
+        const invalidAnswer = { ...validAnswer, answer: ''};
 
         chai
           .request(app)

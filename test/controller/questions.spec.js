@@ -80,10 +80,7 @@ describe('QUESTIONS CONTROLLER', () => {
 
     describe('when invalid data is passed', () => {
       it('should not create a question resource', (done) => {
-        const invalidQuestion = Object.assign({}, validQuestion, {
-          questionTitle: '',
-          questionDescription: ''
-        });
+        const invalidQuestion = { ...validQuestion, questionTitle: '', questionDescription: ''};
 
         chai
           .request(app)
