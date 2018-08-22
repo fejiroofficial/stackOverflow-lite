@@ -3,7 +3,6 @@
 [![Build Status](https://travis-ci.com/fejiroofficial/stackoverflow-lite.svg?branch=develop)](https://travis-ci.com/fejiroofficial/stackoverflow-lite)
 [![Coverage Status](https://coveralls.io/repos/github/fejiroofficial/stackoverflow-lite/badge.svg?branch=develop)](https://coveralls.io/github/fejiroofficial/stackoverflow-lite?branch=develop)
 [![Maintainability](https://api.codeclimate.com/v1/badges/5f56a62af1ec8ef51d6c/maintainability)](https://codeclimate.com/github/fejiroofficial/stackoverflow-lite/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/5f56a62af1ec8ef51d6c/test_coverage)](https://codeclimate.com/github/fejiroofficial/stackoverflow-lite/test_coverage)
 
 Andela developer challenge: Stack Overflow-lite is a platform where people can ask questions and provide answers.
 
@@ -28,7 +27,6 @@ Install [`node`](https://nodejs.org/en/download/), version 8 or greater
 Clone the repo:
 ```sh
 git clone https://github.com/fejroofficial/stackoverflow-lite.git
-cd stackoverflow-lite
 ```
 
 Start server:
@@ -47,10 +45,10 @@ npm start
 | POST          | api/v1/questions/:id/answers| Add an answer                         |
 
 
-Api is hosted [`here`]()
+Api is hosted [`here`](https://stack-over-flow-lite.herokuapp.com/api/v1)
 
 
 ## UI Templates
 
-UI is hosted [here](https://fejiroofficial.github.io/StackOverflow-lite)
+UI is hosted [`here`](https://fejiroofficial.github.io/stackoverflow-lite)
 

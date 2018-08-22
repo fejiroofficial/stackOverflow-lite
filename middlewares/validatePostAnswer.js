@@ -3,7 +3,7 @@ const validatePostAnswer = (req, res, next) => {
   
     answer = answer && answer.toString().trim();
     if (!answer) {
-      const err = new Error('Answer is required');
+      const err = new Error("Answer is required");
       err.statusCode = 400;
       return next(err);
     }

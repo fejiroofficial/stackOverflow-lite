@@ -10,8 +10,8 @@ const postAnswer = (req, res) => {
     const now = new Date().toISOString();
     if( questionFound < 1 ) {
         return res.status(404).json({
-            status: 'fail',
-            message: 'No question found with provided params'
+            status: "fail",
+            message: "No question found with provided params"
         })
     } 
     const newAnswer = {
@@ -22,10 +22,9 @@ const postAnswer = (req, res) => {
         updatedAt: now
     }
     answers.push(newAnswer); 
-    console.log(answers);
     return res.status(201).json({
-        status: 'successful',
-        message: 'Answer added successfully',
+        status: "successful",
+        message: "Answer added successfully",
         answer: newAnswer
     });
 }
