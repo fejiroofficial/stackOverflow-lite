@@ -10,8 +10,8 @@ app.use(express.urlencoded({ extended: false }));
 
 app.get('/api/v1', (req, res) => {
   res.status(200).json({
-    status: 'success',
-    message: 'Welcome to home page'
+    status: "success",
+    message: "Welcome to home page"
   });
 });
 
@@ -20,7 +20,7 @@ app.use('/api/v1', router);
 app.use('*', (err, req, res, next) => {
   const statusCode = err.statusCode || 500;
   res.status(statusCode).json({
-    status: 'fail',
+    status: "fail",
     message: err.message
   });
 });
