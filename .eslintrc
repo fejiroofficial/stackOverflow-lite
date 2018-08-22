@@ -1,0 +1,36 @@
+ {
+    "env": {
+        "browser": true,
+        "node": true,
+        "commonjs": true,
+        "es6": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "airbnb"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 2016,
+        "sourceType": "module"
+    },
+    "rules": {
+        "indent": [
+            "error",
+             2
+        ],
+        "linebreak-style": [
+            "error",
+            "windows"
+        ],
+        "quotes": [
+            "error",
+            "double"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "max-len": [1, 80, 2]
+
+    }
+}

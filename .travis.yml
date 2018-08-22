@@ -1,0 +1,33 @@
+language: node_js
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: "53711ff6-0487-4f5f-b742-544d89205040"
+  
+
+node_js: 
+  - node
+
+env:
+  global:
+    - CC_TEST_REPORTER_ID=bc96229170e06e65f474105f89e6367abf78482cba7b910b7af6a70d642697a5
+
+cache: 
+  directories: 
+    - "node_modules"    
+
+rvm:
+  - 2.2.0
+
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+
+script:
+  - yarn test
+
+after_script:
+  - yarn coverage
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
