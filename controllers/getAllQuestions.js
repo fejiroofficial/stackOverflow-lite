@@ -1,9 +1,9 @@
 import { allQuestions } from '../datastore/questions';
 
 const getAllQuestions = (req, res) => {
-    res.status(200).json ({
+    res.status(200).json({
         status: "success",
-       questions: allQuestions
+        questions: allQuestions
     });
 }
 
