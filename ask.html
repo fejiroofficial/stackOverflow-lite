@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>stack-lite</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Anaheim' rel='stylesheet'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
@@ -17,9 +17,19 @@
             <div id="logo-div"></div>
             <div id="app-name">Stack Overflow lite</div>
         </div>
+        <div class="log-bar">
+            <div class="user-log-bar">
+                <i class="material-icons">account_circle</i>
+                <div id="home-u-name">
+                        <a href="./profile.html">Tholle-mayer</a>
+                </div>
+                <div id="home-u-name" class="sign-out">
+                    <a href="./index.html">Sign out</a>
+                </div>
+            </div>    
     </div>
-    <div class="mini-top-bar">
     </div>
+    <div class="hero-banner"></div>
     <div class="main-content">
         <div class="main-content-left">
             <div class="left-mini">
@@ -32,7 +42,7 @@
                 <div class="public">
                     <i class="material-icons">public</i>
                 </div>
-                <a href="./questions.html">StackOverflow</a>
+                <a href="./questions.html">All Questions</a>
             </div>
         </div>
         <div class="main-content-right">
@@ -42,18 +52,21 @@
                 </form>
             </div>
             <div class="right-content">
-                <div class="quest-header">Ask a question</div>
-                <div class="ans-header">Title</div>
+                <div class="ask-header">Ask a question</div>
+                <div class="ans-header">Question title</div>
                 <div id="ans-title">
                     <input type="text" class="text" placeholder="Your title goes here">
                 </div>
-                <div class="ans-header">Body</div>
+                <div class="ans-header">Question description</div>
                 <textarea id="text-area"></textarea>
                 <div class="btn-post-box">Post Your Question</div>
 
             </div>
         </div>
     </div>
+    <footer>
+        footer goes here
+    </footer>
 
 </body>
 

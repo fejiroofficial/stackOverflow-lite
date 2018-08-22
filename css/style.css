@@ -4,17 +4,41 @@
 html, body, container {
     margin: 0px;
     padding: 0px;
-    height: 100%;
+    min-height: 500px;
     width: 100%;
-    min-width: 1235px;
     font-family: 'Anaheim', sans-serif;
 }
+.activity {
+    display: flex;
+}
+
+.activity-num {
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    color: white;
+    background-color: #b6ac7f;
+}
+.activity-ans {
+    height: 25px;
+    width: 70px;
+    text-align: center;
+    color: white;
+    background-color: #b6ac7f;
+}
+.activity-vote {
+    margin-left: 40px;
+    background-color: #b6ac7f;
+}
+
 .top-bar {
-    height: 40px;
+    height: 45px;
     width: 100%;
     display: flex;
-
+    color: black;
+    box-shadow: 0px -3px 15px 0px lightgrey;
 }
+
 .logo-header {
     height: 30px;
     width: 40%;
@@ -22,10 +46,18 @@ html, body, container {
     margin-top: 5px;
     display: flex;
 }
+.hero-banner {
+    height: 94px;
+    width: 404px;
+    background-image: url(http://clipartix.com/wp-content/uploads/2016/08/Questions-free-clipart-grey-bird-with-question-marks-animals-anarres.png);
+    background-size: 16%;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
 #logo-div {
     height: 30px;
     width: 30px;
-    background-image: url('./so-logo.jpg');
+    background-image: url('../so-logo.jpg');
     background-size: cover;
     background-position: 50%;
 }
@@ -33,18 +65,21 @@ html, body, container {
     height: 30px;
     width: 200px;
     font-size: 24px;
+    padding-left: 10px;
 }
 .log-bar {
     height: 30px;
     width: 60%;
     display: flex;
 }
+
 .user-log-bar {
   height: inherit;
   display: flex;
-  margin-left: 600px;
-  padding-top: 4px;
+  margin-left: 500px;
+  padding-top: 9px;
 }
+
 #home-u-name {
   height: inherit;
   padding-top: 2px;
@@ -54,6 +89,7 @@ html, body, container {
     height: 50px;
     width: 100%;
 }
+
 .home {
     width: 200px;
     height: inherit;
@@ -62,14 +98,39 @@ html, body, container {
     padding-top: 16px;
 }
 
+.pic-home {
+    height: 50px;
+    width: 50px;
+    background-image: url(http://i2.cdn.turner.com/cnnnext/dam/assets/140926165711-john-sutter-profile-image-full-169.jpg);
+    background-position: 100%;
+    background-size: 173%;
+    background-repeat: no-repeat;
+}
+
+.quest-time {
+    padding-top: 29px;
+    padding-left: 2px;
+}
+
+.activity-flex {
+    display: flex;
+}
+
+.act-log {
+    padding-top: 24px;
+    margin-left: 367px;
+}
+
 ul {
     list-style-type: none;
     display: flex;
     margin-top: 11px;
-    margin-left: 400px;
+    margin-left: 465px;
+    height: inherit;
 }
 li {
-    margin-left: 100px;
+    margin-left: 30px;
+    width: 60px;
 }
 .sign-in-content {
     height: 375px;
@@ -117,8 +178,7 @@ input[type=email], input[type=password], input[type=text], input[type=number] {
     box-sizing: border-box;
 }
 #ans-title {
-    width: 500px;
-    margin-left: 98px;
+    width: 618px;
 }
 #btn-container {
     height: 50px;
@@ -128,7 +188,7 @@ input[type=email], input[type=password], input[type=text], input[type=number] {
 #sign-btn {
     height: 50px;
     width: 150px;
-    border-radius: 2px;
+    border-radius: 10px;
     border: none;
     cursor: pointer;
     outline: none;
@@ -143,23 +203,28 @@ input[type=email], input[type=password], input[type=text], input[type=number] {
     width: 100%;
     display: flex;
 }
+
 .main-content-left {
     height: 500px;
-    width: 30%;
-    margin-top: 90px;
+    width: 27%;
 }
+
 .main-content-right {
     height: 100%;
     width: 70%;
 }
+
 .right-header {
     height: 80px;
     width: 100%;
     display: flex;
 }
+
 .home-quest {
     width: 606px;
     font-size: 25px;
+    margin-left: 11px;
+    margin-top: -8px;
 }
 .text {
     height: 40px;
@@ -169,32 +234,29 @@ input[type=email], input[type=password], input[type=text], input[type=number] {
 .btn-ask-box {
     height: 40px;
     width: 119px;
+    border-radius: 5px;
     margin-left: 80px;
-    background-color: black;
+    background-color: #b6ac7f;
     color: white;
     font-size: 20px;
     text-align: center;
     padding-top: 8px;
     cursor: pointer;
-    margin-top: 8px;
 }
 .btn-post-box {
     height: 59px;
-    width: 120px;
-    background-color: black;
+    width: 138px;
+    border-radius: 5px;
+    background-color: #b6ac7f;
     color: white;
     font-size: 15px;
     text-align: center;
     padding-top: 23px;
     cursor: pointer;
-    margin-left: 100px;
 }
 .right-content {
     width: 100%;
     height: 100%;
-    border-left-style: solid;
-    border-color: lightgrey;
-    border-width: thin;
 }
 .quest-header {
     height: 87px;
@@ -203,22 +265,27 @@ input[type=email], input[type=password], input[type=text], input[type=number] {
     padding-top: 27px;
     padding-left: 10px;
 }
+.ask-header {
+    height: 87px;
+    margin-top: 10px;
+    font-size: 30px;
+    padding-top: 27px;
+    padding-left: 195px;
+}
 .ans-header {
     height: 87px;
     font-size: 24px;
-    padding-left: 10px;
     padding-top: 27px;
 }
 .quest-container {
     min-height: 117px;
+    max-width: 750px;
     width: 80%;
     padding-left: 15px;
-    padding-right: 15px;
     border-top-style: solid;
     border-bottom-style: solid;
     border-width: thin;
     border-color: #f8f1f1;
-    border-right-style: solid;
 }
 .user-quest-container {
     width: 100%;
@@ -240,17 +307,27 @@ input[type=email], input[type=password], input[type=text], input[type=number] {
     height: inherit;
     width: 15%;
 }
+
 .left-mini {
     height: 50px;
     width: 170px;
-    margin-left: 234px;
+    padding-top: 12px;
+    padding-left: 5px;
+    margin-left: 113px;
     font-size: 19px;
     display: flex;
+    border-color: lightgrey;
+    border-left-width: thin;
+    border-bottom-width: thin;
+    border-left-style: solid;
+    border-bottom-style: solid;
+    background-color: #b6ac7f;
 }
+
 #text-area {
     height: 200px;
-    width: 500px;
-    margin-left: 100px;
+    width: 622px;
+    border-color: lightgrey;
 }
 .profile-content {
     height: 300px;
@@ -269,12 +346,11 @@ input[type=email], input[type=password], input[type=text], input[type=number] {
 }
 #about-user {
     height: 300px;
-    width: 670px;
+    width: 427px;
     display: flex;
 }
 #des-user {
-    height: inherit;
-    width: 460px;
+    width: 273px;
     padding-left: 10px;
 }
 #dis-name {
@@ -295,7 +371,8 @@ input[type=email], input[type=password], input[type=text], input[type=number] {
 }
 #social-user {
     width: inherit;
-    height: inherit;
+    height: 156px;
+    padding-top: 17px;
 }
 .soc-top {
     height: 30px;
@@ -308,13 +385,14 @@ input[type=email], input[type=password], input[type=text], input[type=number] {
 }
 .public {
     width: 25px;
+    margin-left: -5px;
 }
 #twitter {
     padding-left: 5px;
 }
 .edit-btn {
     margin-top: 25px;
-    margin-left: 11px;
+    margin-left: 81px;
 }
 .user-quest-head {
     min-height: 200px;
@@ -353,10 +431,119 @@ a:hover {
 }
 
 a.active {
-  color: crimson;
   font-weight: bolder;
 }
 
 #anc-ask {
     color: white;
 }
+
+.sign-out {
+    margin-left: 30px;
+}
+
+footer {
+    height: 65px;
+    margin-top: 50px;
+    border-color: lightgrey;
+    border-top-style: solid;
+    border-top-width: thin;
+    text-align: center;
+    padding-top: 34px;
+    background-color: #b6ac7f;
+}
+
+ @media (max-width: 1334px) { 
+     .act-log {
+         margin-left: 286px;
+     }
+ }
+
+ @media (max-width: 1196px) {
+     ul {
+         margin-left: 335px;
+     }
+     .logo-header {
+         margin-left: 50px;
+     }
+     .main-content-left {
+         width: 25%;
+     }
+     .quest-time {
+         width: 84px;
+     }
+     .act-log {
+        margin-left: 267px;
+    }
+ }
+
+ @media (max-width: 1024px) {
+     ul {
+         margin-left: 357px;
+     }
+     li {
+         margin-left: 17px;
+     }
+     .left-mini {
+         margin-left: 51px;
+     }
+     .right-header {
+         width: 91%;
+     }
+     .act-log {
+         margin-left: 189px;
+     }
+     .hero-banner {
+         margin-left: -54px;
+     }
+     .sign-out-content {
+         margin-left: 26%;
+     }
+     .sign-in-content {
+        margin-left: 26%;
+    }
+    .user-log-bar {
+        margin-left: 362px;
+    }
+}
+
+@media (max-width: 768px) {
+    ul {
+        margin-left: 233px;
+    }
+    li {
+        margin-left: 12px;
+    }
+    .left-mini {
+        margin-left: 19px;
+    }
+    .right-header {
+        width: 91%;
+    }
+    .act-log {
+        margin-left: 105px;
+    }
+    .hero-banner {
+        margin-left: -54px;
+    }
+    .logo-header {
+        margin-left: 17px;
+    }
+    .quest-container {
+        width: 91%;
+    }
+    .sign-out-content {
+        margin-left: 18%;
+    }
+    .sign-in-content {
+       margin-left: 18%;
+   }
+   .home {
+       margin-left: 0px;
+   }
+   .user-log-bar {
+    margin-left: 230px;
+}
+}
+
+
