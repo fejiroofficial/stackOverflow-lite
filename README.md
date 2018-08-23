@@ -26,7 +26,7 @@ Install [`node`](https://nodejs.org/en/download/), version 8 or greater
 
 Clone the repo:
 ```sh
-git clone https://github.com/fejroofficial/stackoverflow-lite.git
+git clone https://github.com/fejroofficial/stackOverflow-lite.git
 ```
 
 Start server:
@@ -50,5 +50,5 @@ Api is hosted [`here`](https://stack-over-flow-lite.herokuapp.com/api/v1)
 
 ## UI Templates
 
-UI is hosted [`here`](https://fejiroofficial.github.io/stackoverflow-lite)
+UI is hosted [`here`](https://fejiroofficial.github.io/stackOverflow-lite)
 
