@@ -2,7 +2,7 @@ import express from 'express';
 import questionCtrl from '../controllers';
 import middlewares from '../middlewares'
 
-const router = express.Router()
+const router = express.Router();
 
 router.route('/questions')
       .get(questionCtrl.getAllQuestions)
