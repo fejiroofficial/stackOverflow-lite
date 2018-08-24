@@ -1,0 +1,21 @@
+{
+    "development": {
+      "user": "postgres",
+      "password": "fejiro21",
+      "database": "stackdb",
+      "host": "127.0.0.1",
+      "port": 5432
+    },
+  
+    "test": {
+      "user": "postgres",
+      "password": "fejiro21",
+      "database": "stackdb",
+      "host": "127.0.0.1",
+      "port": 5432
+    },
+  
+    "production": {
+      "use_env_variable": "DATABASE_URL"
+    }
+}
