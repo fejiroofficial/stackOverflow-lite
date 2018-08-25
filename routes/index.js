@@ -8,5 +8,6 @@ const router = express.Router();
 router.post('/auth/signup', middlewares.validateSignup, userCtrl.signup);
 router.post('/auth/login', middlewares.validateSignin, userCtrl.signin);
 router.get('/questions', questionCtrl.getAllQuestions);
+router.get('/questions/:id', questionCtrl.getSingleQuestion);
 
 export default router;

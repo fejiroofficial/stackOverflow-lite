@@ -24,12 +24,12 @@ CREATE TABLE IF NOT EXISTS questions (
 
 CREATE TABLE IF NOT EXISTS answers (
   "id" SERIAL PRIMARY KEY,
-  "questionId" INT NOT NULL,
+  "question_id" INT NOT NULL,
   "answer" TEXT,
   "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW(),
   "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW(),
 
   --Relationship 
-  FOREIGN KEY("questionId") REFERENCES questions("id") ON DELETE CASCADE
+  FOREIGN KEY("question_id") REFERENCES questions("id") ON DELETE CASCADE
 );
 

@@ -6,6 +6,7 @@ import pgp, { QueryFile } from 'pg-promise';
 import setup from '../config/config.json';
 import User from '../models/user';
 import Question from '../models/questions';
+import Answer from '../models/answers';
 
 const sql = (file) => {
   // generate full path
@@ -19,6 +20,7 @@ const initOptions = {
   extend(obj) {
     obj.users = new User(obj);
     obj.questions = new Question(obj);
+    obj.answers = new Answer(obj);
   },
 };
 

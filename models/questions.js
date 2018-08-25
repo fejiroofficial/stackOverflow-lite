@@ -5,13 +5,13 @@ export default class Question {
 
   //create a new question
   create(values) {
-    const sql = "INSERT INTO allQuestions (questionTitle, questionDescription) VALUES(${questionTitle}, ${questionDescription}) RETURNING *";
+    const sql = "INSERT INTO questions (questionTitle, questionDescription) VALUES(${questionTitle}, ${questionDescription}) RETURNING *";
     return this.db.one(sql, values);
   }
   // find question by id
   findById(id) {
     const sql = "SELECT * FROM questions WHERE id = $1";
-    return this.db.one(sql, values);
+    return this.db.one(sql, id);
   }
   //delete question;
   remove(id) {
