@@ -5,9 +5,10 @@
   "main": "app.js",
   "scripts": {
     "start": "babel-node app.js",
-    "build": "nodemon app.js --exec babel-node",
+    "dev": "nodemon app.js --exec babel-node",
     "test": "cross-env NODE_ENV=test nyc mocha --timeout 10000 --require babel-register test --exec --exit",
-    "coverage": "nyc report --reporter=text-lcov | coveralls"
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "migrate": "babel-node db"
   },
   "repository": {
     "type": "git",
@@ -20,10 +21,12 @@
   },
   "homepage": "https://github.com/fejiroofficial/stackoverflow-lite#readme",
   "dependencies": {
+    "bcrypt": "^3.0.0",
     "bluebird": "^3.5.1",
     "codeclimate-test-reporter": "^0.5.0",
     "coveralls": "^3.0.2",
     "cross-env": "^5.2.0",
+    "dotenv": "^6.0.0",
     "eslint": "^5.3.0",
     "eslint-config-airbnb": "^17.1.0",
     "express": "^4.16.3",

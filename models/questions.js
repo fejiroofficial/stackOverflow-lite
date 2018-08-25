@@ -25,7 +25,5 @@ export default class Question {
   all(userId) {
     const sql = "SELECT * FROM allquestions WHERE userId = $1";
     return this.db.one(sql, userId);
-  }
-
-  
+  }  
 }
