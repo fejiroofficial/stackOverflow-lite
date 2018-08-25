@@ -40,4 +40,3 @@ const signin = (req, res) => {
 };
 
 export default signin;
-
