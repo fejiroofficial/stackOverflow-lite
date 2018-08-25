@@ -6,8 +6,6 @@ export default class Question {
 
   //create a new question
   create(values) {
-    //assign visiblity to public if not given;
-    if (!values.visiblity) values.visiblity = "public";
     const sql = "INSERT INTO allQuestions (questionTitle, questionDescription, visibility) VALUES(${questionTitle}, ${questionDescription}) RETURNING *";
     return this.db.one(sql, values);
   }

@@ -1,7 +1,9 @@
 import signup from './signup'
+import signin from './signin'
 
 const userCtrl = {
-    signup
+    signup,
+    signin
 }
 
 export default userCtrl;
