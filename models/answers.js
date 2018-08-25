@@ -1,4 +1,3 @@
-
 export default class Answer {
     constructor(db) {
       this.db = db;

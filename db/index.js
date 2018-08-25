@@ -5,6 +5,7 @@ import promise from 'bluebird';
 import pgp, { QueryFile } from 'pg-promise';
 import setup from '../config/config.json';
 import User from '../models/user';
+import Question from '../models/questions';
 
 const sql = (file) => {
   // generate full path
@@ -17,6 +18,7 @@ const initOptions = {
   promiseLib: promise,
   extend(obj) {
     obj.users = new User(obj);
+    obj.questions = new Question(obj);
   },
 };
 
