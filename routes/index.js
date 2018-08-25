@@ -4,6 +4,7 @@ import middlewares from '../middlewares';
 
 const router = express.Router();
 
-// create new user route
 router.post('/auth/signup', middlewares.validateSignup, userCtrl.signup);
+router.post('/auth/login', middlewares.validateSignin, userCtrl.signin);
+
 export default router;
