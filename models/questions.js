@@ -5,7 +5,7 @@ export default class Question {
 
   //create a new question
   create(values) {
-    const sql = "INSERT INTO questions (questionTitle, questionDescription) VALUES(${questionTitle}, ${questionDescription}) RETURNING *";
+    const sql = "INSERT INTO questions (user_id, question_title, question_description) VALUES(${userId}, ${questionTitle}, ${questionDescription}) RETURNING *";
     return this.db.one(sql, values);
   }
   // find question by id

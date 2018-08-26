@@ -5,17 +5,25 @@
  * @param {object} next.
  * @returns {void}.
  */
+
+const signinError = (message) => {
+  const err = Error(message);
+  err.statusCode = 400;
+  return err;
+}; 
+
 const validatePostQuestion = (req, res, next) => {
-    let { questionTitle, questionDescription } = req.body;
-  
-    questionTitle = questionTitle && questionTitle.toString().trim();
-    questionDescription = questionDescription && questionDescription.toString().trim();
-    if (!questionTitle || !questionDescription) {
-      const err = new Error("Question title and description are required");
-      err.statusCode = 400;
-      return next(err);
-    }
-    return next(); 
-  }
-  
-  export default validatePostQuestion;
+  let { questionTitle, questionDescription } = req.body;
+  questionTitle = questionTitle && questionTitle.toString().trim();
+  questionDescription = questionDescription && questionDescription.toString().trim();
+
+  if (!questionTitle && !questionDescription) return next(signinError("Title and description are required"));
+  if (!questionTitle) return next(signinError("Title is required"));
+  if (questionTitle === '') return next(signinError("Title cannot be empty"));
+  if (!questionDescription) return next(signinError("Description is required"));
+  if (questionDescription === '') return next(signinError("description cannot be empty"));
+
+  return next();
+}
+
+export default validatePostQuestion;

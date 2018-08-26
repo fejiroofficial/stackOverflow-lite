@@ -11,14 +11,14 @@ CREATE TABLE IF NOT EXISTS users (
 
 CREATE TABLE IF NOT EXISTS questions (
   "id" SERIAL PRIMARY KEY,
-  "userId" INT NOT NULL,
-  "questionTitle" VARCHAR(120) NOT NULL,
-  "questionDescription" TEXT,
+  "user_id" INT NOT NULL,
+  "question_title" VARCHAR(120) NOT NULL,
+  "question_description" TEXT,
   "createdAt" TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW(),
   "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW(),
 
   --Relationship 
-  FOREIGN KEY("userId") REFERENCES users("id") ON DELETE CASCADE
+  FOREIGN KEY("user_id") REFERENCES users("id") ON DELETE CASCADE
 );
 
 
