@@ -3,7 +3,7 @@ import db from '../../db';
 
 const signup = (req, res) => {
   let { firstname, lastname, email } = req.body;
-  const { password, confirm } = req.body;
+  const { password } = req.body;
   firstname = firstname ? firstname.toString().trim() : firstname;
   lastname = lastname ? lastname.toString().trim() : lastname;
   email = email ? email.toString().trim() : email;
@@ -29,7 +29,7 @@ const signup = (req, res) => {
         });
     })
     .catch((err) => {
-        console.log(err)
+      console.log(err)
       return res.status(500).json({
         status: "fail",
         message: "unable to create user account",
