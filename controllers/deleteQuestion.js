@@ -10,12 +10,8 @@ const deleteQuestion = (req, res) => {
           message: 'question not found',
         });
       }
-      console.log(question);
       // check if question belongs to user
       const { userId } = req;
-      console.log(question.user_id);
-      console.log(userId, '========>')
-
       if (question.user_id === userId) {
         return t.questions.remove(questionId)
           .then((question) => (

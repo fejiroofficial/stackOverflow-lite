@@ -7,13 +7,19 @@ const router = express.Router();
 
 router.post('/auth/signup', middlewares.validateSignup, userCtrl.signup);
 router.post('/auth/login', middlewares.validateSignin, userCtrl.signin);
-router.get('/questions', questionCtrl.getAllQuestions);
+
 router.use('*',  middlewares.verifyToken)
+
+router.get('/questions', questionCtrl.getAllQuestions);
+
 router.route('/questions')
         .get(questionCtrl.getAllQuestions)
         .post(middlewares.validatePostQuestion, questionCtrl.postQuestion); 
-router.get('/questions/:id', questionCtrl.getSingleQuestion);
-router.delete('/questions/:id', questionCtrl.deleteQuestion);
-router.post('/questions/:id/answers', questionCtrl.postAnswer);
+
+router.route('/questions/:id')
+      .get(questionCtrl.getSingleQuestion)
+      .delete(questionCtrl.deleteQuestion);
+
+router.post('/questions/:id/answers',middlewares.validatePostAnswer, questionCtrl.postAnswer);
 
 export default router;
