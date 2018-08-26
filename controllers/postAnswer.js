@@ -1,32 +1,30 @@
-import { allQuestions } from '../datastore/questions';
-import { answers } from '../datastore/questions';
-import db from '../datastore/helperFn';
-
+import db from '../db';
 
 const postAnswer = (req, res) => {
     const questionId = parseInt(req.params.id, 10);
-    const questionFound = db.findOne(allQuestions, questionId);
-    const { answer } = req.body;
-    const now = new Date().toISOString();
-    if( questionFound < 1 ) {
-        return res.status(404).json({
-            status: "fail",
-            message: "No question found with provided params"
-        })
-    } 
+    let { answer } = req.body;
+    answer = answer ? answer.toString().trim() : answer;
+
     const newAnswer = {
-        id: answers.length + 1,
-        answer,
-        questionId: questionId,
-        createdAt: now,
-        updatedAt: now
+        questionId,
+        answer
     }
-    answers.push(newAnswer); 
-    return res.status(201).json({
-        status: "successful",
-        message: "Answer added successfully",
-        answer: newAnswer
-    });
-}
+
+    return db.answers.create(newAnswer)
+    .then((answer) => {
+        res.status(201).json({
+            status: "success",
+            message: "Answers has been added",
+            answer: answer,
+        });
+    })
+    .catch((err) => {
+        console.log(err)
+        return res.status(500).json({
+            status: "fail",
+            message: "unable to upload your answers"
+        });
+    })
+};
 
 export default postAnswer;
