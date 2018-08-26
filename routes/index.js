@@ -13,5 +13,7 @@ router.route('/questions')
         .get(questionCtrl.getAllQuestions)
         .post(middlewares.validatePostQuestion, questionCtrl.postQuestion); 
 router.get('/questions/:id', questionCtrl.getSingleQuestion);
+router.delete('/questions/:id', questionCtrl.deleteQuestion);
+router.post('/questions/:id/answers', questionCtrl.postAnswer);
 
 export default router;
