@@ -5,7 +5,9 @@ const postAnswer = (req, res) => {
     let { answer } = req.body;
     answer = answer ? answer.toString().trim() : answer;
 
+    const { userId } = req;
     const newAnswer = {
+        userId,
         questionId,
         answer
     }
