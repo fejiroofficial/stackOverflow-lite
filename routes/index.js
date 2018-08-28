@@ -20,6 +20,7 @@ router.route('/questions/:id')
       .get(questionCtrl.getSingleQuestion)
       .delete(questionCtrl.deleteQuestion);
 
-router.post('/questions/:id/answers',middlewares.validatePostAnswer, questionCtrl.postAnswer);
+router.post('/questions/:id/answers', middlewares.validatePostAnswer, questionCtrl.postAnswer);
+router.put('/questions/:id/answers/:id', middlewares.validatePostAnswer, questionCtrl.updateAnswer);
 
 export default router;
