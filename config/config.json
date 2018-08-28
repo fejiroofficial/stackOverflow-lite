@@ -6,6 +6,13 @@
       "host": "127.0.0.1",
       "port": 5432
     },
+    "heroku": {
+      "user": "opdkijntujckoa",
+      "password": "bbcbc09c775b2d097518ac869fab043bff9b433c58e7be66ac9001f91afeeb37",
+      "database": "ddkvlfospi6vb8",
+      "host": "127.0.0.1",
+      "port": 5432
+    },
   
     "test": {
       "user": "postgres",
