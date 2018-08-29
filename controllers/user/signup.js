@@ -23,7 +23,6 @@ const signup = (req, res) => {
           res.status(201).json({
             status: "success",
             message: "Account created successfully",
-            user,
             token,
           });
         });
