@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: false }));
 
 app.get('/api/v1', (req, res) => {
   res.status(200).json({
-    status: "success",
+    success: "true",
     message: "Welcome to home page"
   });
 });
