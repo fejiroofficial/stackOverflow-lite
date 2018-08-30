@@ -17,7 +17,7 @@ describe("app test", () => {
             .end((err, res) => {
                 expect(err).to.not.exist;
                 expect(res.status).to.equal(200);
-                expect(res.body.status).to.equal("success");
+                expect(res.body.success).to.equal("true");
                 expect(res.type).to.equal("application/json");
                 expect(res.body).to.be.an("object");
                 expect(res.body.message).to.equal("Welcome to home page");

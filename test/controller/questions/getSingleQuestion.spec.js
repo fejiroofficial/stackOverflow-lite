@@ -9,7 +9,7 @@ describe('Get a single question', () => {
   it('should return question if it exist', (done) => {
     chai
       .request(app)
-      .get('/api/v1/questions/10')
+      .get('/api/v1/questions/')
       .end((err, res) => {
         expect(res).to.have.status(200);
         expect(res.body.status).to.equal('successful');

@@ -7,34 +7,28 @@ const signin = (req, res) => {
   const { password } = req.body;
   email = email && email.toString().trim();
 
-  return db.task("signin", t => t.users.findByEmail(email)
+  return db.task('signin', data => data.users.findByEmail(email)
   .then((user) => {
-    if(!user){
-      return res.status(401).json({
-        status: "fail",
-        message: "wrong email or password"
-      });     
-    }
     const allowEntry = bcrypt.compareSync(password, user.password);
     if (!allowEntry){
       return res.status(401).json({
-        status: "fail",
-        message: "wrong email or password"
+        success: 'false',
+        message: 'wrong email or password'
       });
     }
     const user_details = { ...user };
-    const token = jwt.sign({ id: user.id }, process.env.SECRET_KEY, { expiresIn: "24hrs" });
+    const token = jwt.sign({ id: user.id }, process.env.SECRET_KEY, { expiresIn: 86400 });
     res.status(200).json({
-      status: "success",
-      message: "Login was successful",
+      success: 'true',
+      message: 'Login was successful',
       user_details,
       token,
     });
   }))
   .catch((err) => {
-    return res.status(500).json({
-      status: "fail",
-      message: "unable to login, try again!"
+    return res.status(401).json({
+      success: 'false',
+      message: 'unable to login, wrong email or password!'
     });
   });
 };

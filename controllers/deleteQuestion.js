@@ -2,24 +2,24 @@ import db from '../db';
 
 const deleteQuestion = (req, res) => {
   const questionId = parseInt(req.params.id, 10);
-  return db.task('delete', t => t.questions.findById(questionId)
+  return db.task('delete', db => db.questions.findById(questionId)
     .then((question) => {
       if (!question) {
         return res.status(404).json({
-          status: 'fail',
+          success: 'false',
           message: 'question not found',
         });
       }
       // check if question belongs to user
       const { userId } = req;
       if (question.user_id === userId) {
-        return t.questions.remove(questionId)
+        return db.questions.remove(questionId)
           .then((question) => (
             db.answers.remove(question.user_id)
               .then((answer) => {
                 res.status(200).json({
-                  status: "successful",
-                  message: "succefully deleted a question"
+                  success: 'true',
+                  message: 'successfully deleted a question'
                 })
               })  
           ));
@@ -27,7 +27,7 @@ const deleteQuestion = (req, res) => {
     })
     .catch((err) => {
       res.status(500).json({
-        status: 'fail',
+        success: 'false',
         message: 'unable to delete this question',
       });
     }));
