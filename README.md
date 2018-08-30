@@ -4,7 +4,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/fejiroofficial/stackoverflow-lite/badge.svg?branch=develop)](https://coveralls.io/github/fejiroofficial/stackoverflow-lite?branch=develop)
 [![Maintainability](https://api.codeclimate.com/v1/badges/5f56a62af1ec8ef51d6c/maintainability)](https://codeclimate.com/github/fejiroofficial/stackoverflow-lite/maintainability)
 
-Andela developer challenge: Stack Overflow-lite is a platform where people can ask questions and provide answers.
+Andela developer challenge: Stack Overflow-lite is a platform where people can ask questions and provide answers. UI template [`here`](https://fejiroofficial.github.io/stackOverflow-lite)
 
 ## Features
 
