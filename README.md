@@ -37,12 +37,18 @@ npm start
 
 ## API Routes
 
-|   HTTP VERB   | ENDPOINT                    | FUCTIONALITY                          |
-| ------------- | ----------------------------| --------------------------------------|
-| GET           | api/v1/questions            | Fetch all questions                   |
-| GET           | api/v1/questions/:id        | Fetch a specific question             |
-| POST          | api/v1/questions            | Add a question                        |
-| POST          | api/v1/questions/:id/answers| Add an answer                         |
+|   HTTP VERB   | ENDPOINT                         | FUCTIONALITY                          |
+| ------------- | ---------------------------------| --------------------------------------|
+| POST          | api/v1/auth/:id/signin           | Register a user                       |
+| POST          | api/v1/questions/:id/login       | Add an answer                         |
+| GET           | api/v1/questions                 | Fetch all questions                   |
+| GET           | api/v1/questions/:id             | Fetch a specific question             |
+| POST          | api/v1/questions                 | Add a question                        |
+| POST          | api/v1/questions/:id/answers     | Add an answer                         |
+| DELETE        | api/v1/questions/:id             | Delete a question                     |
+| PUT           | api/v1/questions/:id/answers/:id | Add an answer                         |
+
+
 
 
 Api is hosted [`here`](https://stack-over-flow-lite.herokuapp.com/api/v1)
