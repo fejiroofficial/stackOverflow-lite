@@ -15,17 +15,16 @@ const postQuestion = (req, res) => {
   return db.questions.create(newQuestion)
     .then((question) => {
       res.status(201).json({
-        status: "successful",
-        message: "Question created successfully",
+        success: 'true',
+        message: 'Question created successfully',
         question: question,
       });
     })
  
   .catch((err) => {
-    console.log(err)
     return res.status(500).json({
-      status: "fail",
-      message: "unable to register your question"
+      success: 'false',
+      message: 'unable to register your question'
     });
   })
 };

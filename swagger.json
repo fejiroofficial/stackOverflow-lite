@@ -1,0 +1,219 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "StackOverflow-lite API",
+    "description" : "Documentation of StackOverflow-lite RESTful API.",
+    "version" : "0.1"
+  },
+  "servers" : [ {
+    "url" : "https://stack-over-flow-lite.herokuapp.com/api/v1"
+  } ],
+  "paths" : {
+    "/api/v1/questions/" : {
+      "get" : {
+        "description" : "this gets all the questions ever asked on the platform",
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          },
+          "example" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTM1NDA3NjAyLCJleHAiOjE1MzU0OTQwMDJ9.3QUj-CioAZBflsbhwaqx0mFEDUXFyFrYhiZQ3q3rwpI"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Ok",
+            "content" : {
+              "application/json; charset=utf-8" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : { }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/auth/login" : {
+      "post" : {
+        "description" : "This is an API endpoint for login user",
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          },
+          "example" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTM1NDA3NjAyLCJleHAiOjE1MzU0OTQwMDJ9.3QUj-CioAZBflsbhwaqx0mFEDUXFyFrYhiZQ3q3rwpI"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "ok",
+            "content" : {
+              "application/json; charset=utf-8" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : { }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/questions/1/answers/1" : {
+      "put" : {
+        "description" : "This is an API endpoint for updating an answer.",
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          },
+          "example" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTM1NDA3NjAyLCJleHAiOjE1MzU0OTQwMDJ9.3QUj-CioAZBflsbhwaqx0mFEDUXFyFrYhiZQ3q3rwpI"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "ok",
+            "content" : {
+              "application/json; charset=utf-8" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : { }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/auth/signup" : {
+      "post" : {
+        "description" : "This is an API endpoint for registering a user.",
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          },
+          "example" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTM1NDA3NjAyLCJleHAiOjE1MzU0OTQwMDJ9.3QUj-CioAZBflsbhwaqx0mFEDUXFyFrYhiZQ3q3rwpI"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Ok",
+            "content" : {
+              "application/json; charset=utf-8" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : { }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/questions/1" : {
+      "get" : {
+        "description" : "This gets a specific question.",
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          },
+          "example" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTM1NDA3NjAyLCJleHAiOjE1MzU0OTQwMDJ9.3QUj-CioAZBflsbhwaqx0mFEDUXFyFrYhiZQ3q3rwpI"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "ok",
+            "content" : {
+              "application/json; charset=utf-8" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : { }
+              }
+            }
+          }
+        }
+      },
+      "delete" : {
+        "description" : "This deletes a question and all the answers posted for it",
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          },
+          "example" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTM1NDA3NjAyLCJleHAiOjE1MzU0OTQwMDJ9.3QUj-CioAZBflsbhwaqx0mFEDUXFyFrYhiZQ3q3rwpI"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "ok",
+            "content" : {
+              "application/json; charset=utf-8" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : { }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/questions/1/answers" : {
+      "post" : {
+        "description" : "This is for posting an answer",
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          },
+          "example" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTM1NDA3NjAyLCJleHAiOjE1MzU0OTQwMDJ9.3QUj-CioAZBflsbhwaqx0mFEDUXFyFrYhiZQ3q3rwpI"
+        } ],
+        "responses" : {
+          "201" : {
+            "description" : "Created",
+            "content" : {
+              "application/json; charset=utf-8" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : { }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/questions" : {
+      "post" : {
+        "description" : "This is for posting a new question.",
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          },
+          "example" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTM1NDA3NjAyLCJleHAiOjE1MzU0OTQwMDJ9.3QUj-CioAZBflsbhwaqx0mFEDUXFyFrYhiZQ3q3rwpI"
+        } ],
+        "responses" : {
+          "201" : {
+            "description" : "Created",
+            "content" : {
+              "application/json; charset=utf-8" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : { }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

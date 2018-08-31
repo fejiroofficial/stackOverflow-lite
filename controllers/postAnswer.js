@@ -15,16 +15,15 @@ const postAnswer = (req, res) => {
     return db.answers.create(newAnswer)
     .then((answer) => {
         res.status(201).json({
-            status: "success",
-            message: "Answers has been added",
+            success: 'true',
+            message: 'Answer has been successfully added',
             answer: answer,
         });
     })
     .catch((err) => {
-        console.log(err)
         return res.status(500).json({
-            status: "fail",
-            message: "unable to upload your answers"
+            success: 'false',
+            message: 'unable to upload your answer'
         });
     })
 };

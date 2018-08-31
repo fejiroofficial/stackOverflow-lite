@@ -8,31 +8,29 @@ const signup = (req, res) => {
   lastname = lastname ? lastname.toString().trim() : lastname;
   email = email ? email.toString().trim() : email;
 
-  return db.task("signup", t => t.users.findByEmail(email)
+  return db.task('signup', db => db.users.findByEmail(email)
     .then((result) => {
       if (result) {
         return res.status(409).json({
-          status: "fail",
-          message: "user with this email already exists",
+          success: 'false',
+          message: 'user with this email already exists',
         });
       }
 
-      return t.users.create({ firstname, lastname, email, password })
+      return db.users.create({ firstname, lastname, email, password })
         .then((user) => {
-          const token = jwt.sign({ id: user.id }, process.env.SECRET_KEY, { expiresIn: "24hrs" });
+          const token = jwt.sign({ id: user.id }, process.env.SECRET_KEY, { expiresIn: 86400 });
           res.status(201).json({
-            status: "success",
-            message: "Account created successfully",
-            user,
+            success: 'true',
+            message: 'Account created successfully',
             token,
           });
         });
     })
     .catch((err) => {
-      console.log(err)
       return res.status(500).json({
-        status: "fail",
-        message: "unable to create user account",
+        success: 'false',
+        message: 'unable to create user account',
       });
     }));
 };
