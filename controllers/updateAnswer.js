@@ -26,7 +26,7 @@ const updateAnswer = (req, res) => {
         const updatedAnswer = {
             answer: answer || answer.answerFound
         }
-        return t.answers.modify(updatedAnswer, answerId)
+        return db.answers.modify(updatedAnswer, answerId)
         .then((answer) => {
             res.status(200).json({
                 success: 'true',
