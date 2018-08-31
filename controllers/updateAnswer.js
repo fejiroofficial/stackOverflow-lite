@@ -16,7 +16,7 @@ const updateAnswer = (req, res) => {
         }
         //does answer belong to the user who wants to update it
         const { userId } = req;
-        const owner = answerFound.id === userId
+        const owner = answerFound.user_id === userId
         if (!owner) {
             return res.status(403).json({
                 success: 'false',
