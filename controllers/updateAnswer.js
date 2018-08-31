@@ -4,7 +4,7 @@ const updateAnswer = (req, res) => {
     const answerId = parseInt(req.params.id, 10);
     let { answer } = req.body;
     answer = answer ? answer.toString().trim() : answer;
-    console.log(answer);
+    
 
     db.task('modify-answer', db => db.answers.findById(answerId)
     .then((answerFound) => {
@@ -16,7 +16,7 @@ const updateAnswer = (req, res) => {
         }
         //does answer belong to the user who wants to update it
         const { userId } = req;
-        const owner = answerFound.id === userId
+        const owner = answerFound.user_id === userId
         if (!owner) {
             return res.status(403).json({
                 success: 'false',
@@ -26,7 +26,7 @@ const updateAnswer = (req, res) => {
         const updatedAnswer = {
             answer: answer || answer.answerFound
         }
-        return t.answers.modify(updatedAnswer, answerId)
+        return db.answers.modify(updatedAnswer, answerId)
         .then((answer) => {
             res.status(200).json({
                 success: 'true',

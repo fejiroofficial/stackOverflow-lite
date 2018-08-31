@@ -5,7 +5,7 @@ const getSingleQuestion = (req, res) => {
   db.tx( db => {
     const queryOne = db.questions.findById(question_id);
     const querytwo = db.answers.all(question_id);
-    return t.batch([queryOne, querytwo]);
+    return db.batch([queryOne, querytwo]);
   })
     .then((result) => {
       res.status(200).json({
