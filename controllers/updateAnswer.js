@@ -4,7 +4,7 @@ const updateAnswer = (req, res) => {
     const answerId = parseInt(req.params.id, 10);
     let { answer } = req.body;
     answer = answer ? answer.toString().trim() : answer;
-    console.log(answer);
+    
 
     db.task('modify-answer', db => db.answers.findById(answerId)
     .then((answerFound) => {
