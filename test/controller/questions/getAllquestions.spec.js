@@ -11,9 +11,9 @@ describe('Get all questions', () => {
       .get('/api/v1/questions')
       .end((err, res) => {
         expect(res.status).to.equal(200);
-        expect(res.body.status).to.equal('success');
-        expect(res.body.questions).to.be.an('object');
+        expect(res.body.success).to.equal('true');
+        expect(res.body.questions).to.be.an('array');
         done();
       });
-  });
+  })
 });

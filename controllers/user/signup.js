@@ -20,9 +20,11 @@ const signup = (req, res) => {
       return db.users.create({ firstname, lastname, email, password })
         .then((user) => {
           const token = jwt.sign({ id: user.id }, process.env.SECRET_KEY, { expiresIn: 86400 });
+          const user_details = { ...user };
           res.status(201).json({
             success: 'true',
             message: 'Account created successfully',
+            user_details,
             token,
           });
         });

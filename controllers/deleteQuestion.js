@@ -4,12 +4,6 @@ const deleteQuestion = (req, res) => {
   const questionId = parseInt(req.params.id, 10);
   return db.task('delete', db => db.questions.findById(questionId)
     .then((question) => {
-      if (!question) {
-        return res.status(404).json({
-          success: 'false',
-          message: 'question not found',
-        });
-      }
       // check if question belongs to user
       const { userId } = req;
       if (question.user_id === userId) {
@@ -23,12 +17,17 @@ const deleteQuestion = (req, res) => {
                 })
               })  
           ));
+      } else if (question.user_id !== userId) {
+        return res.status(401).json({
+          success: 'false',
+          message: 'unauthorized to delete this question'
+        })
       }
     })
     .catch((err) => {
-      res.status(500).json({
+      res.status(404).json({
         success: 'false',
-        message: 'unable to delete this question',
+        message: 'question does not exist in the database',
       });
     }));
 };

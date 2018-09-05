@@ -8,7 +8,7 @@ export default class User {
   // create new user
   create(values) {
     values.password = bcrypt.hashSync(values.password, 10);
-    const sql = "INSERT INTO users(firstname, lastname, email, password) VAlUES(${firstname}, ${lastname}, ${email}, ${password}) RETURNING id, 'firstname', 'lastname', email";
+    const sql = "INSERT INTO users(firstname, lastname, email, password) VAlUES(${firstname}, ${lastname}, ${email}, ${password}) RETURNING id, firstname, lastname, email";
     return this.db.one(sql, values);
   }
 
@@ -22,5 +22,11 @@ export default class User {
   findByEmail(email) {
     const sql = "SELECT * FROM users WHERE email = $1";
     return this.db.oneOrNone(sql, email);
+  }
+
+  // remove user
+  remove(id){
+    const sql = "DELETE FROM users WHERE id = $1";
+    return this.db.one(sql, id);
   }
 }

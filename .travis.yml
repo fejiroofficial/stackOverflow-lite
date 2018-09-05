@@ -20,7 +20,12 @@ cache:
 rvm:
   - 2.2.0
 
+services: 
+  - postgresql  
+
 before_script:
+  - psql -c 'drop database if exists stackdb_test;' -U postgres
+  - psql -c 'create database stackdb_test;' -U postgres
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build

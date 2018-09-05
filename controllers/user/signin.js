@@ -9,11 +9,17 @@ const signin = (req, res) => {
 
   return db.task('signin', data => data.users.findByEmail(email)
   .then((user) => {
+    if (!user){
+      return res.status(401).json({
+        success: 'false',
+        message: 'no account created with this email address.'
+      });
+    }
     const allowEntry = bcrypt.compareSync(password, user.password);
     if (!allowEntry){
       return res.status(401).json({
         success: 'false',
-        message: 'wrong email or password'
+        message: 'Incorrect password!'
       });
     }
     const user_details = { ...user };
@@ -26,9 +32,9 @@ const signin = (req, res) => {
     });
   }))
   .catch((err) => {
-    return res.status(401).json({
+    return res.status(500).json({
       success: 'false',
-      message: 'unable to login, wrong email or password!'
+      message: 'unable to login, try again!'
     });
   });
 };
