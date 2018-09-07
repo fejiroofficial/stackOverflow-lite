@@ -12,6 +12,7 @@ node_js:
 env:
   global:
     - CC_TEST_REPORTER_ID=bc96229170e06e65f474105f89e6367abf78482cba7b910b7af6a70d642697a5
+    - SECRET_KEY=somethinglight
 
 cache: 
   directories: 
@@ -26,13 +27,12 @@ services:
 before_script:
   - psql -c 'drop database if exists stackdb_test;' -U postgres
   - psql -c 'create database stackdb_test;' -U postgres
-  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
 
 script:
-  - yarn test
+  - npm test
 
 after_script:
-  - yarn coverage
+  - npm run coverage
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT

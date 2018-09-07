@@ -6,6 +6,12 @@ const postQuestion = (req, res) => {
   questionTitle = questionTitle ? questionTitle.toString().trim() : questionTitle;
   questionDescription = questionDescription ? questionDescription.toString().trim() : questionDescription;
 
+  if (questionTitle.length > 120){
+    return res.status(400).json({
+      success: 'false',
+      message: 'question title must be a maximum of 120 characters'
+    })
+  }
   const newQuestion = {
     userId,
     questionTitle,

@@ -7,27 +7,9 @@ chai.use(chaiHttp);
 
 describe('Get a single question', () => {
   it('should return question if it exist', (done) => {
-    let question = {
-      "id": 1,
-      "user_id": 1,
-      "question_title": "This can be seen to have a big influence on this",
-      "question_description": "What is this?",
-      "createdAt": "2018-08-30T21:19:21.517Z",
-      "updatedAt": "2018-08-30T21:19:21.517Z",
-      "answers": [
-          {
-              "id": 1,
-              "user_id": 10,
-              "question_id": 1,
-              "answer": "my very first answer",
-              "createdAt": "2018-09-02T23:00:00.821Z",
-              "updatedAt": "2018-09-02T23:00:00.821Z"
-          }]
-    }
     chai
       .request(app)
-      .get('/api/v1/questions/' + question.id)
-      .send(question)
+      .get('/api/v1/questions/2')
       .end((err, res) => {
         expect(res).to.have.status(200);
         expect(res.body).to.be.an('object');

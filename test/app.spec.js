@@ -13,7 +13,7 @@ describe("app test", () => {
   
     it("should respond with a welcome message", (done) => {
         chai.request(app)
-            .get('/api/v1')
+            .get('/')
             .end((err, res) => {
                 expect(err).to.not.exist;
                 expect(res.status).to.equal(200);
