@@ -10,6 +10,8 @@ const myUrl = '/api/v1';
 
 describe('Post question', () => {
   const newQuestion = {
+    id: 3,
+    userId: 2,
     questionTitle: '403 forbidden',
     questionDescription: 'I am getting this error all the time',
   };
@@ -68,11 +70,12 @@ describe('Post question', () => {
   });
 
   it('should return successful if question is posted', (done) => {
+    const question = { ...newQuestion };
     chai
       .request(app)
       .post(`${myUrl}/questions`)
-      .set('token', `${jwt.sign({ id: 1 }, process.env.SECRET_KEY, { expiresIn: '24hrs' })}`)
-      .send(newQuestion)
+      .set('token', `${jwt.sign({ id: 2 }, process.env.SECRET_KEY, { expiresIn: '24hrs' })}`)
+      .send(question)
       .end((err, res) => {
         expect(res.status).to.equal(201);
         expect(res.body.success).to.equal('true');

@@ -4,7 +4,7 @@ deploy:
   provider: heroku
   api_key:
     secure: "53711ff6-0487-4f5f-b742-544d89205040"
-  
+
 
 node_js: 
   - node
@@ -13,6 +13,7 @@ env:
   global:
     - CC_TEST_REPORTER_ID=bc96229170e06e65f474105f89e6367abf78482cba7b910b7af6a70d642697a5
     - SECRET_KEY=somethinglight
+    - NODE_ENV=test
 
 cache: 
   directories: 
@@ -22,13 +23,19 @@ rvm:
   - 2.2.0
 
 services: 
-  - postgresql  
+  - postgresql 
+
+postgres: 
+  adapter: postgresql
+  database: stackdb_test
+  username: postgres   
 
 before_script:
   - psql -c 'create database stackdb_test;' -U postgres
+  - npm run db:setup
 
 script:
-  - npm run test
+  - npm test
 
 after_script:
   - npm run coverage
