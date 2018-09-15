@@ -31,7 +31,8 @@ CREATE TABLE IF NOT EXISTS answers (
   "updatedAt" TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW(),
 
   --Relationship 
-  FOREIGN KEY("question_id") REFERENCES questions("id") ON DELETE CASCADE,
   FOREIGN KEY("user_id") REFERENCES users("id") ON DELETE CASCADE
+  FOREIGN KEY("question_id") REFERENCES questions("id") ON DELETE CASCADE
+  
 );
 
